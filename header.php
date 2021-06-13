@@ -9,6 +9,7 @@
 
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>" />
+	<link rel="icon" type="image/svg+xml" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.svg">
 	<title><?php
 					/*
 	 * Print the <title> tag based on what is being viewed.
