@@ -14,35 +14,38 @@ Version: 2021
 					--color-text
 */
 
-/* ---- underdox navigation */
-
-#navi {
-	float: left;
-	width: 170px;
-	margin-bottom: 2em;
+:root {
+	--border: 1px solid #000000;
 }
 
-#navi_border {
+/* ---- underdox navigation */
+
+#nav-primary {
+	float: left;
+	width: 170px;
+	margin-bottom: 0;
+}
+
+#nav-primary_border {
 	border: 3px solid var(--color-primary); /* Farbe */
 	font-size: 12px;
 	position: relative;
 	width: 108px;
 }
 
-#navi ul {
+#nav-primary ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
 
-#navi ul a {
+#nav-primary ul a {
 	position: relative;
 	display: block;
 	left: -70px;
 	width: 90px;
 	margin: 0 0 0;
 	padding: 0.25em 0 0.25em 75px;
-
 	color: #333333 !important;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-weight: bold;
@@ -50,22 +53,20 @@ Version: 2021
 	text-transform: lowercase;
 }
 
-#navi ul a:hover {
+#nav-primary ul a:hover {
 	background-color: var(--color-primary); /* Farbe */
 	color: #ffffff !important;
 }
 
-#navi li.current a {
+#nav-primary li.current a {
 	background-color: var(--color-primary); /* Farbe */
 	color: #ffffff !important;
 }
 
-/* ---- underdox custom */
+/* ---- Underdox custom */
 
-a:link,
-a:visited,
-a:active,
-a:hover,
+/* ---- ---- Links */
+
 .page-title,
 .page-title span,
 .page-title a:link,
@@ -79,6 +80,43 @@ a:hover,
 .entry-title a:hover {
 	color: var(--color-primary) !important; /* Farbe */
 }
+
+/* ---- ---- Headings */
+
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
+	color: var(--color-primary); /* Farbe */
+	line-height: 1.5em;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+#content h2 {
+	font-size: 13px;
+}
+
+/* ---- ---- Columns */
+
+.wp-block-columns {
+	border-top: var(--border);
+	padding-top: .5em;
+}
+
+/* ---- ---- Images
+						 fix block images aspect ratio bug  */
+.wp-block-image img,
+.wp-block-image svg {
+	height: auto;
+}
+
+figure.wp-block-image {
+	margin: 0;
+}
+
+/* ---- ---- aside */
 
 div.format-aside {
 	margin: 0 0 25px 0;
@@ -123,7 +161,7 @@ div.format-aside p {
 #nav_menu-3 .menu-navigation-container {
 	border: solid 3px var(--color-primary); /* Farbe */
 	width: 108px;
-	height: 255px;
+	/* height: 255px; */
 	position: relative; /*left:100px;*/
 	font-size: 12px;
 }
@@ -157,7 +195,7 @@ ul#menu-navigation-1 a:hover {
 	color: #fff !important;
 }
 
-.xoxo li {
+#nav-secondary li {
 	list-style: none !important;
 }
 #footer-widget-area li,
@@ -587,14 +625,17 @@ textarea {
 	padding: 2px;
 }
 a:link {
-	color: var(--color-primary); /* Farbe */
+	/* color: var(--color-primary);  */
+	color: inherit;
 }
 a:visited {
-	color: var(--color-primary); /* Farbe */
+	/* color: var(--color-primary);  */
+	color: inherit;
 }
 a:active,
 a:hover {
-	color: var(--color-primary); /* Farbe */
+	/* color: var(--color-primary);  */
+	color: inherit;
 }
 
 /* Text meant only for screen readers */
@@ -760,15 +801,6 @@ div.menu li {
 	margin: 0 0 20px 0;
 }
 
-#content h2,
-#content h3,
-#content h4,
-#content h5,
-#content h6 {
-	color: var(--color-primary); /* Farbe */
-	line-height: 1.5em;
-	font-size: 100%;
-}
 #content table {
 	border: 1px solid #e7e7e7;
 	margin: 0 -1px 24px 0;
