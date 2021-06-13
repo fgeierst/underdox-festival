@@ -21,22 +21,27 @@ Version: 2021
 /* ---- underdox navigation */
 
 #nav-primary {
+	border: 3px solid var(--color-primary);
 	float: left;
-	width: 170px;
-	margin-bottom: 0;
-}
-
-#nav-primary_border {
-	border: 3px solid var(--color-primary); /* Farbe */
-	font-size: 12px;
-	position: relative;
+	/* width: 170px; */
 	width: 108px;
+	font-size: 12px;
+	margin-bottom: 1em;
 }
 
 #nav-primary ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+}
+
+#nav-primary .widget-container,
+#nav-secondary .widget-container {
+	margin-bottom: 0;
+}
+
+#footer .menu-item {
+	margin-right: 1em;
 }
 
 #nav-primary ul a {
@@ -92,6 +97,7 @@ Version: 2021
 	line-height: 1.5em;
 	font-size: 100%;
 	font-weight: bold;
+	margin-bottom: 1em;
 }
 
 #content h2 {
@@ -239,8 +245,7 @@ ul#qtranslate-3-chooser {
 /* ---- underdox title (intro.php) */
 
 body.page-template-intro-php {
-	background: url(http://underdox-festival.de/wordpress/wp-content/uploads/2021/06/see.jpg) no-repeat center center
-		fixed;
+	background: url(https://underdox-festival.de/wp-content/uploads/2021/06/see.jpg) no-repeat center center fixed;
 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -1473,7 +1478,7 @@ h3#reply-title {
 /* ---- Main sidebars */
 #main .widget-area ul {
 	margin-left: 0;
-	padding: 0 20px 0 0;
+	padding: 0 0 0 0;
 }
 #main .widget-area ul ul {
 	border: none;
