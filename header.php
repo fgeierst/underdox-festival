@@ -52,35 +52,27 @@
 
 <body <?php body_class(); ?>>
 
-	<div id="admintool"><a href="http://underdox-festival.de/wordpress/wp-admin/" target="_blank">Bearbeiten</a></div>
-
 	<div id="wrapper" class="hfeed">
 		<div id="header">
 			<div id="masthead">
 				<div id="branding" role="banner">
-
-					<!-- ----- #logo -->
-					<!-- <div id="logo">
-						<a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><img src="http://underdox-festival.de/wordpress/wp-content/uploads/2021/06/UX16_banner_web-2-e1623069113107.jpg" alt="<?php echo esc_attr(get_bloginfo('name', 'display')); ?> " /></a>
-					</div>-->
-
-					<?php
-					// Check if this is a post or page, if it has a thumbnail, and if it's a big one
-					if (
-						is_singular() && current_theme_supports('post-thumbnails') &&
-						has_post_thumbnail($post->ID) &&
-						( /* $src, $width, $height */$image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-thumbnail')) &&
-						$image[1] >= HEADER_IMAGE_WIDTH
-					) :
-						// Houston, we have a new header image!
-						echo get_the_post_thumbnail($post->ID);
-					elseif (get_header_image()) : ?>
-						<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
-					<?php endif; ?>
-				</div><!-- #branding -->
-
-
-			</div><!-- #masthead -->
-		</div><!-- #header -->
+					<a href="<?php echo get_home_url(); ?>">
+						<?php
+						// Check if this is a post or page, if it has a thumbnail, and if it's a big one
+						if (
+							is_singular() && current_theme_supports('post-thumbnails') &&
+							has_post_thumbnail($post->ID) &&
+							( /* $src, $width, $height */$image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-thumbnail'))
+							&& $image[1] >= HEADER_IMAGE_WIDTH
+						) :
+							// Houston, we have a new header image!
+							echo get_the_post_thumbnail($post->ID);
+						elseif (get_header_image()) : ?>
+							<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
+						<?php endif; ?>
+					</a>
+				</div><!-- /#branding -->
+			</div><!-- /#masthead -->
+		</div><!-- /#header -->
 
 		<div id="main">

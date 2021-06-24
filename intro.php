@@ -42,7 +42,7 @@ Template Name: intro
 	<div id="titelcenter">
 
 		<p><a href="https://underdox-festival.de/blog/"><img class="alignnone size-full wp-image-1240" src="https://underdox-festival.de/wp-content/uploads/2021/06/UX16_banner_web-2-e1623069113107.jpg" alt="Underdox Filmfestival für Dokument und Experiment München" width="696" height="79" /></a></p>
-		<p align="center"><a href="https://underdox-festival.de/blog/">deutsch</a> | <a href="https://www.underdox-festival.de/en/programme.htm">english</a></p>
+		<p align="center"><a href="https://underdox-festival.de/blog/">deutsch</a> | <a href="https://underdox-festival.de/blog-en/">english</a></p>
 
 	</div>
 
