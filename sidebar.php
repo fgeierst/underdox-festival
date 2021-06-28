@@ -17,5 +17,11 @@ if (is_active_sidebar('secondary-widget-area')) : ?>
     <ul id="nav-secondary">
       <?php dynamic_sidebar('secondary-widget-area'); ?>
     </ul><!-- /#nav-secondary -->
+    <?php
+    // Show edit link, if this is a post or page
+    if (is_singular()) {
+      edit_post_link(__('Edit', 'twentyten'), '<p class="edit-link">', '</p>');
+    }
+    ?>
   </div><!-- /#secondary .widget-area -->
 <?php endif; ?>

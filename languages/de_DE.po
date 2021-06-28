@@ -398,5 +398,5 @@ msgstr "Weiterlesen <span class=\"meta-nav\">&rarr;</span>"
 
 #: archive.php:39
 msgid "Blog Archives"
-msgstr "Blog-Archive"
+msgstr "Archiv"
 

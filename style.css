@@ -93,7 +93,7 @@ Version: 2021
 #content h4,
 #content h5,
 #content h6 {
-	color: var(--color-primary); /* Farbe */
+	color: var(--color-text);
 	line-height: 1.5em;
 	font-size: 100%;
 	font-weight: bold;
@@ -102,6 +102,7 @@ Version: 2021
 
 #content h2 {
 	font-size: 13px;
+	color: var(--color-primary); /* Farbe */
 }
 
 /* ---- ---- Columns */
