@@ -56,7 +56,7 @@
 		<div id="header">
 			<div id="masthead">
 				<div id="branding" role="banner">
-					<a href="<?php echo get_home_url(); ?>">
+					<a href="<?php echo get_home_url(); ?>" title="Homepage">
 						<?php
 						// Check if this is a post or page, if it has a thumbnail, and if it's a big one
 						if (
