@@ -529,11 +529,14 @@ textarea {
 	line-height: 15px;
 }
 hr {
-	background-color: #e7e7e7;
-	border: 0;
+	background-color: transparent;
+	border: none;
+	border-block-end: var(--border);
 	clear: both;
 	height: 1px;
-	margin-bottom: 18px;
+}
+#content hr {
+	margin-bottom: 1em !important;
 }
 
 /* Text elements */
