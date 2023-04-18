@@ -31,7 +31,15 @@
 		}
 	},
 	"styles": {
-		"css": ".subheader {\n margin-block-start: 0;\n}",
+		"blocks": {
+			"core/post-terms": {
+				"css": "a { text-decoration: none; }",
+				"typography": {
+					"textDecoration": "none"
+				}
+			}
+		},
+		"css": "/* Theme Custom CSS start */\n.subheader {\n margin-block-start: 0;\n}\n\n.subheader__term a { \ntext-decoration: none;\n}\n/* Theme Custom CSS end */",
 		"elements": {
 			"link": {
 				"color": {
