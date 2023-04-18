@@ -31,6 +31,7 @@
 		}
 	},
 	"styles": {
+		"css": ".subheader {\n margin-block-start: 0;\n}",
 		"elements": {
 			"link": {
 				"color": {
@@ -53,5 +54,5 @@
 		}
 	],
 	"version": 2,
-	"$schema": "https://schemas.wp.org/wp/6.2/theme.json"
+	"$schema": "https://schemas.wp.org/trunk/theme.json"
 }
