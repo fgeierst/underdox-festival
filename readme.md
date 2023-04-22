@@ -1,7 +1,7 @@
-# UNDERDOX — international film festival for document and experiment
+# UNDERDOX — Wordpress Themes
 
 - Live: https://underdox-festival.de/
-- Wordpress themes
+- Themes
 	- underdox-twenty-ten
 		- Name: Underdox 2
 		- based on Twenty_Ten	
