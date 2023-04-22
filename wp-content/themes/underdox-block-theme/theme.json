@@ -26,6 +26,20 @@
 					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
 					"name": "System Font",
 					"slug": "system-font"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Nunito Sans",
+							"fontStyle": "normal",
+							"fontWeight": "200 1000",
+							"src": [
+								"file:./assets/fonts/nunito-sans_normal_200 1000.ttf"
+							]
+						}
+					],
+					"fontFamily": "Nunito Sans",
+					"slug": "nunito-sans"
 				}
 			]
 		}
@@ -48,7 +62,7 @@
 			}
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--verdana)"
+			"fontFamily": "var:preset|font-family|nunito-sans"
 		}
 	},
 	"templateParts": [
