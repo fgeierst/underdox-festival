@@ -1,0 +1,21 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"title": "Underdox cover",
+	"name": "underdox/cover",
+	"category": "layout",
+	"icon": "universal-access-alt",
+	"textdomain": "underdox",
+	"attributes": {
+		"message": {
+			"type": "string",
+			"default": "Hello from a dynamic block!"
+		}
+	},
+	"example": {
+		"attributes": {
+			"message": "Example Dynamic Block"
+		}
+	},
+	"editorScript": "file:./block.js"
+}
