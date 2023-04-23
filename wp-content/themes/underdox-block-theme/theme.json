@@ -47,7 +47,17 @@
 	"styles": {
 		"blocks": {
 			"core/post-terms": {
+				"color": {
+					"text": "var:preset|color|black"
+				},
 				"css": "a { text-decoration: none; }",
+				"elements": {
+					"link": {
+						"color": {
+							"text": "var:preset|color|black"
+						}
+					}
+				},
 				"typography": {
 					"textDecoration": "none"
 				}
@@ -57,7 +67,15 @@
 					"textDecoration": "none",
 					"textTransform": "uppercase"
 				}
+			},
+			"core/term-description": {
+				"color": {
+					"text": "var:preset|color|black"
+				}
 			}
+		},
+		"color": {
+			"text": "var:preset|color|black"
 		},
 		"css": "/* Theme Custom CSS start */\n/* Theme Custom CSS start */\n.subheader {\n margin-block-start: 0;\n}\n\n.subheader__term a, .page-title a { \ntext-decoration: none;\n}\n/* Theme Custom CSS end */\n/* Theme Custom CSS end */",
 		"elements": {
