@@ -4,6 +4,7 @@
 # ... but track specific files / folders: 
 
 # General files
+!.editorconfig
 !.gitignore
 !/README.md
 !/LICENSE
@@ -23,3 +24,5 @@
 /wp-content/themes/*
 !/wp-content/themes/underdox-twenty-ten
 !/wp-content/themes/underdox-block-theme
+
+/wp-content/themes/underdox-block-theme/**/node_modules
