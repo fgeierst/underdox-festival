@@ -51,10 +51,22 @@
 				"typography": {
 					"textDecoration": "none"
 				}
+			},
+			"core/site-title": {
+				"typography": {
+					"textDecoration": "none",
+					"textTransform": "uppercase"
+				}
 			}
 		},
-		"css": "/* Theme Custom CSS start */\n.subheader {\n margin-block-start: 0;\n}\n\n.subheader__term a { \ntext-decoration: none;\n}\n/* Theme Custom CSS end */",
+		"css": "/* Theme Custom CSS start */\n/* Theme Custom CSS start */\n.subheader {\n margin-block-start: 0;\n}\n\n.subheader__term a, .page-title a { \ntext-decoration: none;\n}\n/* Theme Custom CSS end */\n/* Theme Custom CSS end */",
 		"elements": {
+			"heading": {
+				"typography": {
+					"fontStyle": "normal",
+					"fontWeight": "900"
+				}
+			},
 			"link": {
 				"color": {
 					"text": "var:preset|color|black"
