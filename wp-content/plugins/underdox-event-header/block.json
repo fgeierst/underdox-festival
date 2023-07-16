@@ -1,0 +1,10 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"title": "Underdox Event Header",
+	"name": "underdox/event-header",
+	"category": "layout",
+	"icon": "universal-access-alt",
+	"textdomain": "underdox",
+	"editorScript": "file:./block.js"
+}

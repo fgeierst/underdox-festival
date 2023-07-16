@@ -28,3 +28,4 @@
 !/wp-content/plugins
 /wp-content/plugins/*
 !/wp-content/plugins/underdox-cover
+!/wp-content/plugins/underdox-event-header

@@ -44,7 +44,7 @@
 							"fontStyle": "normal",
 							"fontWeight": "200 1000",
 							"src": [
-								"file:./assets/fonts/nunito-sans_normal_200 1000.ttf"
+								"file:./assets/fonts/nunito-sans-vf.ttf"
 							]
 						}
 					],
@@ -59,25 +59,28 @@
 		"blocks": {
 			"core/heading": {
 				"color": {
-					"text": "var:preset|color|theme"
+					"text": "var(--wp--preset--color--theme)"
 				},
 				"elements": {
 					"link": {
 						"color": {
-							"text": "var:preset|color|theme"
+							"text": "var(--wp--preset--color--theme)"
+						},
+						"typography": {
+							"textDecoration": "none"
 						}
 					}
 				}
 			},
 			"core/post-terms": {
 				"color": {
-					"text": "var:preset|color|black"
+					"text": "var(--wp--preset--color--black)"
 				},
 				"css": "a { text-decoration: none; }",
 				"elements": {
 					"link": {
 						"color": {
-							"text": "var:preset|color|black"
+							"text": "var(--wp--preset--color--black)"
 						}
 					}
 				},
@@ -89,7 +92,10 @@
 				"elements": {
 					"link": {
 						"color": {
-							"text": "var:preset|color|theme"
+							"text": "var(--wp--preset--color--theme)"
+						},
+						"typography": {
+							"textDecoration": "none"
 						}
 					}
 				}
@@ -98,7 +104,7 @@
 				"elements": {
 					"link": {
 						"color": {
-							"text": "var:preset|color|white"
+							"text": "var(--wp--preset--color--white)"
 						}
 					}
 				},
@@ -109,18 +115,18 @@
 			},
 			"core/term-description": {
 				"color": {
-					"text": "var:preset|color|black"
+					"text": "var(--wp--preset--color--black)"
 				}
 			}
 		},
 		"color": {
-			"text": "var:preset|color|black"
+			"text": "var(--wp--preset--color--black)"
 		},
 		"css": "/* Theme Custom CSS start */\n/* Theme Custom CSS start */\n.subheader {\n margin-block-start: 0;\n}\n\n.subheader__term a, .page-title a { \ntext-decoration: none;\n}\n/* Theme Custom CSS end */\n/* Theme Custom CSS end */",
 		"elements": {
 			"heading": {
 				"color": {
-					"text": "var:preset|color|theme"
+					"text": "var(--wp--preset--color--theme)"
 				},
 				"typography": {
 					"fontStyle": "normal",
@@ -129,7 +135,7 @@
 			},
 			"link": {
 				"color": {
-					"text": "var:preset|color|black"
+					"text": "var(--wp--preset--color--black)"
 				}
 			}
 		},
@@ -142,7 +148,7 @@
 			}
 		},
 		"typography": {
-			"fontFamily": "var:preset|font-family|nunito-sans"
+			"fontFamily": "var(--wp--preset--font-family--nunito-sans)"
 		}
 	},
 	"templateParts": [
