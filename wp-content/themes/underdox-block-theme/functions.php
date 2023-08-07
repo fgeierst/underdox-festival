@@ -47,7 +47,7 @@ function custom_polylang_langswitcher() {
 			'hide_if_empty' => 1,
 			'hide_current' => 1,
 		];
-		$output = '<ul class="polylang_langswitcher">'.pll_the_languages( $args ). '</ul>';
+		$output = '<nav aria-label="Languages"><ul class="polylang_langswitcher">'.pll_the_languages( $args ). '</ul></nav>';
 	}
 
 	return $output;
