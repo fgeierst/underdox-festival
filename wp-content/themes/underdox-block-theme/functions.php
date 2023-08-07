@@ -29,3 +29,28 @@ add_action('wp_enqueue_scripts', 'underdox_styles');
     );
 }
 add_action( 'enqueue_block_editor_assets', 'underdox_block_theme_enqueue_block_assets' ); */
+
+/**
+ * Polylang Shortcode - https://wordpress.org/plugins/polylang/
+ * Add this code in your functions.php
+ * Put shortcode [polylang_langswitcher] to post/page for display flags
+ *
+ * @return string
+ */
+function custom_polylang_langswitcher() {
+	$output = '';
+	if ( function_exists( 'pll_the_languages' ) ) {
+		$args   = [
+			'show_flags' => 0,
+			'show_names' => 1,
+			'echo'       => 0,
+			'hide_if_empty' => 1,
+			'hide_current' => 1,
+		];
+		$output = '<ul class="polylang_langswitcher">'.pll_the_languages( $args ). '</ul>';
+	}
+
+	return $output;
+}
+
+add_shortcode( 'polylang_langswitcher', 'custom_polylang_langswitcher' );

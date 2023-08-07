@@ -18,3 +18,15 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 :root {
 	--my-theme-color: pink;
 }
+
+.footer-navigation ul {
+	gap: .5em 2em;
+}
+
+.polylang_langswitcher {
+	list-style: none;
+	display: inline-flex;
+	gap: .5em;
+	margin: 0;
+	padding-inline-start: 0;
+}
