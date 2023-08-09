@@ -54,3 +54,22 @@ function custom_polylang_langswitcher() {
 }
 
 add_shortcode( 'polylang_langswitcher', 'custom_polylang_langswitcher' );
+
+
+/**
+ * Add polylang current language css class to <body>
+ */
+function add_polylang_current_language_class() {
+	if ( function_exists( 'pll_current_language' ) ) {
+		$current_language = pll_current_language();
+		if ( ! empty( $current_language ) ) {
+			add_filter( 'body_class', function ( $classes ) use ( $current_language ) {
+				$classes[] = 'polylang--' . $current_language;
+				return $classes;
+			} );
+
+		}
+	}
+}
+
+add_action( 'after_setup_theme', 'add_polylang_current_language_class' );

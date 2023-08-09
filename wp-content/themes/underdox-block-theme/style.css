@@ -23,6 +23,8 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 	gap: .5em 2em;
 }
 
+/* Polylang */
+
 .polylang_langswitcher {
 	list-style: none;
 	display: inline-flex;
@@ -33,4 +35,12 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 
 .polylang_langswitcher a {
 	text-decoration: none;
+}
+
+body.polylang--en .polylang--de {
+	display: none;
+} 
+
+body.polylang--de .polylang--en {
+	display: none;
 }
