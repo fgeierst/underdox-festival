@@ -32,18 +32,29 @@
 	}
 
 	.underdox-event-header {
+		/* margin-block-start: -24px; */
+		padding: 0;
 		background-color: var(--wp--preset--color--theme);
 		color: var(--wp--preset--color--white);
-		/* display: grid;
-		align-items: center;
-		justify-content: center; */
+		display: grid;
+		grid-template-columns: [fullwidth-start] var(--wp--style--root--padding-left) [content-start] 1fr [content-end] var(--wp--style--root--padding-right) [fullwidth-end];
+		grid-template-rows: [image-start] auto [image-end subline-start] auto [subline-end];
+		margin-block-end: var(--wp--preset--spacing--70);
+	}
+
+	@media (min-width: 768px) {
+		.underdox-event-header { 
+			grid-template-columns: [fullwidth-start] 1fr [content-start] var(--wp--style--global--content-size) [content-end] 1fr [fullwidth-end];
+		}
 	}
 
 	.underdox-event-header__inner {
-		padding: .6rem ;
+		padding-block: var(--wp--style--root--padding-left);
 		display: flex;
 		gap: .6rem;
 		flex-direction: column;
+		grid-column: content;
+		grid-row: subline;
 	}
 
 	@media (min-width: 768px) {
@@ -56,17 +67,32 @@
 
 	.underdox-event-header__name {
 		margin: 0;
-		font-size: 1.5rem;
+		font-size: 12vw;
 		font-weight: 900;
 		text-transform: uppercase;
 		line-height: 1;
 		text-decoration: none;
+		color: var(--wp--preset--color--theme);
+		grid-row: image;
+		grid-column: content;
+		align-self: end;
+		/* margin-block-end: -0.17em; */
+	}
+
+	.underdox-event-header--no-image .underdox-event-header__name {
 		color: var(--wp--preset--color--white);
+		font-size: 8vw;
+		margin-block-start: var(--wp--style--root--padding-left);
+		margin-block-end: calc(var(--wp--style--root--padding-left) * -.5);
 	}
 
 	@media (min-width: 768px) {
 		.underdox-event-header__name {
-			font-size: 2rem;
+			font-size: 8vw;
+		}
+
+		.underdox-event-header--no-image .underdox-event-header__name {
+			font-size: 8vw;
 		}
 	}
 
@@ -79,15 +105,39 @@
 		margin: 0;
 	}
 
+	.underdox-event-header__image {
+		height: 50vh;
+		width: 100%;
+		object-fit: cover;
+		display: block;
+		grid-column: fullwidth;
+		grid-row: image;
+	}
+
+	@media (min-width: 768px) { 
+		.underdox-event-header__image {
+			height: 70vh;
+		}
+	}
+
 </style>
-<!--   -->
-<div class="has-global-padding is-layout-constrained underdox-event-header">
+
+<?php if (has_post_thumbnail()) {  ?>
+	
+<div class="has-global-padding underdox-event-header">
+	<?php	the_post_thumbnail('large', ['class' => 'underdox-event-header__image']); ?>
+	<a class="underdox-event-header__name" href="<?php echo $event_landing_page; ?>""><?php echo $event_name; ?></a>
 	<div class="is-layout-flow underdox-event-header__inner">
-		<!-- <?php echo $content; ?> -->
-		<a class="underdox-event-header__name" href="<?php echo $event_landing_page; ?>""><?php echo $event_name; ?></a>
+		<div class="underdox-event-header__description"><?php echo $event_description; ?></div>
+	</div>
+</div>
+<?php } else { ?>
+
+<div class="has-global-padding underdox-event-header underdox-event-header--no-image">
+	<a class="underdox-event-header__name" href="<?php echo $event_landing_page; ?>""><?php echo $event_name; ?></a>
+	<div class="is-layout-flow underdox-event-header__inner">
 		<div class="underdox-event-header__description"><?php echo $event_description; ?></div>
 	</div>
 </div>
 
-
-<?php	} ?>
+<?php	} } ?>
