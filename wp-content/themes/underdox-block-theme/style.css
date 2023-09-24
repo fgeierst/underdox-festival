@@ -19,6 +19,29 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 	--my-theme-color: pink;
 }
 
+
+/* Header */
+
+.wp-site-blocks > header {
+	position: sticky;
+	top: 0;
+}
+
+@media (600px <= width <= 790px) {
+	#wpadminbar ~ .wp-site-blocks > header {
+		top: 46px;
+	}
+}
+
+@media (min-width: 791px) {
+	#wpadminbar ~ .wp-site-blocks > header {
+		top: 32px;
+	}
+}
+
+
+/* Footer */
+
 .footer-navigation ul {
 	gap: .5em 2em;
 }
