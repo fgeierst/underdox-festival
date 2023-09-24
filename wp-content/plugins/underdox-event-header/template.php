@@ -14,13 +14,11 @@
 		$event_color = get_term_meta( $term_id, 'event_color', true );
 		$event_background_image_id = get_term_meta( $term_id, 'event_background_image', true );
 		$event_background_image = wp_get_attachment_url( $event_background_image_id );
-		$event_name = $first_term->name;
+	  $event_name = preg_replace('/\s+\d+$/', '', $first_term->name);
 		$event_description = term_description( $term_id );
 		$event_landing_page_id = get_term_meta( $term_id, 'event_landing_page', true );
 		$event_landing_page = get_permalink($event_landing_page_id);
 		?>
-
-
 
 <style>
 	body {
