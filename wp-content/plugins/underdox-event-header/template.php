@@ -72,7 +72,7 @@
 		text-transform: uppercase;
 		line-height: 1;
 		text-decoration: none;
-		color: var(--wp--preset--color--theme);
+		color: <?php if ($event_color == '#000000')  { ?> var(--wp--preset--color--white) <?php } else { ?> var(--wp--preset--color--theme) <?php } ?>;
 		grid-row: image;
 		grid-column: content;
 		align-self: end;
